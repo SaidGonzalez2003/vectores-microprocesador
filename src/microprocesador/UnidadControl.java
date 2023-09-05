@@ -124,8 +124,9 @@ public class UnidadControl {
         //System.out.println(microprocesador.MicroprocesadorVectores.ALU.acumulador);
         System.out.println("---> "+microprocesador.MicroprocesadorVectores.ALU.acumulador);
         
-        String tmpX = microprocesador.MicroprocesadorVectores.ALU.acumulador.substring(1, 2);
-        String tmpY = microprocesador.MicroprocesadorVectores.ALU.acumulador.substring(4,5);
+        
+        String tmpX = microprocesador.MicroprocesadorVectores.ALU.acumulador.substring(1, 3);
+        String tmpY = microprocesador.MicroprocesadorVectores.ALU.acumulador.substring(5,7);
         
         //System.out.println("X: " + tmpX + " Y: " + tmpY);
         
@@ -135,17 +136,7 @@ public class UnidadControl {
         
         direccion=Integer.parseInt(microprocesador.MicroprocesadorVectores.UC.decodificarResultado,10);
         
-        if (datoX <= 15 ) {
-            tmp += "0" + tmpX;
-        }else{
-            tmp += tmpX.toString().toUpperCase();
-        }
-        
-        if (datoY <= 15 ) {
-            tmp += "0" + tmpY;
-        }else{
-            tmp += tmpY;
-        }
+        tmp += tmpX + tmpY;
         
         
         microprocesador.MicroprocesadorVectores.MEMORIA.escritura(direccion, tmp);

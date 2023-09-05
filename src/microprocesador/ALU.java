@@ -65,10 +65,13 @@ public class ALU {
         int tmpY2=Integer.parseInt(X2,16);
         
         int resX = tmpX1 + tmpX2;
-        
         int resY = tmpY1 + tmpY2;
         
-        return "(" + Integer.toHexString(resX).toUpperCase() + ", " + Integer.toHexString(resY).toUpperCase() + ")";
+        return "(" + 
+                String.format("%02X",  Integer.parseInt(String.valueOf(resX), 10))
+                + ", " + 
+                String.format("%02X",  Integer.parseInt(String.valueOf(resY), 10)) + 
+                ")";
         
     }
     
