@@ -32,7 +32,7 @@ public class Memoria {
         this.escritura(12, "000100100011");  // (a+b+c)+d
         this.escritura(13, "001100110100");  // e
         this.escritura(14, "111100000000");  
-        this.escritura(15, "000000000000");
+        this.escritura(15, "111100000000");
     }
     
     /**

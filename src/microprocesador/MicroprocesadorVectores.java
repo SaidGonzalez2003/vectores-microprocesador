@@ -99,6 +99,8 @@ public class MicroprocesadorVectores {
         ALU.muestraALU();
         MEMORIA.muestraMemoria();
         System.out.println("FINALIZA---------------------");
+        
+        System.out.println("salida: " + salida );
 
         return salida;
     }

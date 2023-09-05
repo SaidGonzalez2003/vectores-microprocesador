@@ -69,7 +69,7 @@ public class UnidadControl {
         this.decodificarDato1=this.registroInstruccion.substring(4,8);
         this.decodificarDato2=this.registroInstruccion.substring(8,12);
         this.decodificarResultado=this.decodificarDato2;
-        microprocesador.MicroprocesadorVectores.ALU.operacion=Integer.parseInt(this.decodificarInstruccion,16);
+        microprocesador.MicroprocesadorVectores.ALU.operacion=Integer.parseInt(this.decodificarInstruccion,2);
         microprocesador.MicroprocesadorVectores.ALU.banderas[0]=1;
     }
     
@@ -96,10 +96,10 @@ public class UnidadControl {
          microprocesador.MicroprocesadorVectores.ALU.registroEntradaX1=microprocesador.MicroprocesadorVectores.MEMORIA.lectura(tmp).substring(8, 10);
          microprocesador.MicroprocesadorVectores.ALU.registroEntradaY1=microprocesador.MicroprocesadorVectores.MEMORIA.lectura(tmp).substring(10, 12);
          microprocesador.MicroprocesadorVectores.ALU.banderas[1]=1;
-         System.out.println(microprocesador.MicroprocesadorVectores.MEMORIA.lectura(tmp));
+         //System.out.println(microprocesador.MicroprocesadorVectores.MEMORIA.lectura(tmp));
          
          tmp= Integer.parseInt(this.decodificarDato2,2);
-         System.out.println(tmp);
+        // System.out.println(tmp);
          
          microprocesador.MicroprocesadorVectores.ALU.registroEntradaX2=microprocesador.MicroprocesadorVectores.MEMORIA.lectura(tmp).substring(8, 10);
          microprocesador.MicroprocesadorVectores.ALU.registroEntradaY2=microprocesador.MicroprocesadorVectores.MEMORIA.lectura(tmp).substring(10, 12);
@@ -122,7 +122,7 @@ public class UnidadControl {
         int datoY;
         
         //System.out.println(microprocesador.MicroprocesadorVectores.ALU.acumulador);
-        System.out.println("---> "+microprocesador.MicroprocesadorVectores.ALU.acumulador);
+        //System.out.println("---> "+microprocesador.MicroprocesadorVectores.ALU.acumulador);
         
         
         String tmpX = microprocesador.MicroprocesadorVectores.ALU.acumulador.substring(1, 3);
