@@ -134,7 +134,7 @@ public class UnidadControl {
         datoX= Integer.parseInt(tmpX, 16);
         datoY=Integer.parseInt(tmpY, 16);
         
-        direccion=Integer.parseInt(microprocesador.MicroprocesadorVectores.UC.decodificarResultado,10);
+        direccion=Integer.parseInt(microprocesador.MicroprocesadorVectores.UC.decodificarResultado,2);
         
         tmp += tmpX + tmpY;
         
